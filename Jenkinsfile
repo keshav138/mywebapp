@@ -10,7 +10,7 @@ pipeline{
 
         stage('Run the container'){
             steps{
-                bat 'docker stop -f nginx-container || true'
+                bat 'docker rm -f nginx-container || true'
                 bat 'docker run -p 80:80 --name nginx-container nginx-image'
             }
         }
