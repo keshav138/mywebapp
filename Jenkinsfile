@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Create the docker image'){
             steps{
-                bat 'docker build -t nginx-image'
+                bat 'docker build -t nginx-image .'
             }
         }
 
